@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskVault.API", "TaskVault.API\TaskVault.API.csproj", "{A3142DA2-AC55-4C9A-A3D6-FFE37151ADDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3142DA2-AC55-4C9A-A3D6-FFE37151ADDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3142DA2-AC55-4C9A-A3D6-FFE37151ADDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3142DA2-AC55-4C9A-A3D6-FFE37151ADDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3142DA2-AC55-4C9A-A3D6-FFE37151ADDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C06CB632-E6F6-4499-B074-4D4B521647C6}
+	EndGlobalSection
+EndGlobal

@@ -16,12 +16,13 @@ namespace TaskVault.API.Helpers
 
         public string GenerateJwt(int userId, string email)
         {
+            // ✅ Use NameIdentifier for userId so SignalR can map connections
             var claims = new[]
             {
-        new Claim(JwtRegisteredClaimNames.Sub, email),
-        new Claim("userId", userId.ToString()),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-    };
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()), // For SignalR
+                new Claim(JwtRegisteredClaimNames.Email, email),         // Optional, for general info
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

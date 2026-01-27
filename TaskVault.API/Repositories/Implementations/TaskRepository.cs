@@ -40,7 +40,10 @@ namespace TaskVault.API.Repositories.Implementations
 
         public async Task<IEnumerable<TaskItem>> GetTasksByUser(int userId)
         {
-            return await _context.TaskItems.Where(t => t.UserId == userId).ToListAsync();
+            return await _context.TaskItems
+                .Where(t => t.UserId == userId)
+                .OrderByDescending(t => t.CreatedAt) // newest first
+                .ToListAsync();
         }
 
         public async Task<HelperResponse> UpdateTask(int taskId, TaskDto dto, int userId)

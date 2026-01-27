@@ -26,7 +26,12 @@ namespace TaskVault.API.Controllers
             return int.Parse(userIdClaim!);
         }
 
-
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetTasksByUserId(int userId)
+        {
+            var tasks = await _repo.GetTasksByUser(userId);
+            return Ok(tasks);
+        }
         // GET: api/Task
         [HttpGet]
         public async Task<IActionResult> GetTasks()
